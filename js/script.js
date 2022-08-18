@@ -4,6 +4,7 @@ const username = "CoralStar";
 const gitUserInfo = async function () {
   const userInfo = await fetch(`https://api.github.com/users/${username}`);
   const data = await userInfo.json();
+  showUserInfo(data);
 };
 gitUserInfo();
 //nothing??
@@ -21,6 +22,6 @@ const showUserInfo = function (data) {
       <p><strong>Location:</strong> ${data.location}</p>
       <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
     </div> 
-  `
+  `;
   overview.append(div);
 };

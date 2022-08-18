@@ -1,6 +1,8 @@
 const overview = document.querySelector(".overview");
 const username = "CoralStar";
 const repoList = document.querySelector(".repo-list");
+const classRepo = document.querySelector(".repos");
+const dataRepo = document.querySelector(".repo-data");
 
 const gitUserInfo = async function () {
   const userInfo = await fetch(`https://api.github.com/users/${username}`);

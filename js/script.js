@@ -46,3 +46,10 @@ const showRepos = function (repos) {
   }
 };
 
+repoList.addEventListener("click", function (e) {
+  if (e.target.matches("h3")) {
+    const repoName = e.target.innerText;
+    
+  }
+});
+

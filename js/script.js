@@ -4,6 +4,9 @@ const repoList = document.querySelector(".repo-list");
 const classRepo = document.querySelector(".repos");
 const dataRepo = document.querySelector(".repo-data");
 
+const repoBackButton = document.querySelector(".view-repos");
+const filterInput = document.querySelector(".filter-repos");
+
 const gitUserInfo = async function () {
   const userInfo = await fetch(`https://api.github.com/users/${username}`);
   const data = await userInfo.json();
@@ -80,7 +83,10 @@ const displayRepoInfo = async function (repoInfo, languages) {
     <p>Default Branch: ${repoInfo.default_branch}</p>
     <p>Languages: ${languages.join(", ")}</p>
     <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
-   `;
+   `};
   dataRepo.append(div);
 };
 
+//BackButton.addEventlistener("click", function () ){
+
+};

@@ -72,7 +72,7 @@ const getRepoName = async function (repoName) {
   displayRepoInfo(repoInfo, languages);
 };
 
-const displayRepoInfo = async function (repoInfo, languages) {
+const displayRepoInfo = function (repoInfo, languages) {
   dataRepo.innerHTML = "";
   dataRepo.classList.remove("hide");
   classRepo.classList.add("hide");
@@ -83,9 +83,11 @@ const displayRepoInfo = async function (repoInfo, languages) {
     <p>Default Branch: ${repoInfo.default_branch}</p>
     <p>Languages: ${languages.join(", ")}</p>
     <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
-   `};
+   `;
   dataRepo.append(div);
 };
+
+
 
 //BackButton.addEventlistener("click", function () ){
 

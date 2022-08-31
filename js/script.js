@@ -64,7 +64,7 @@ const getRepoName = async function (repoName) {
   const languages = [];
   for (const language in languageData) {
     languages.push(language);
-  
+  console.log(languages);
   }
   
 };

@@ -105,7 +105,7 @@ filterInput.addEventListener("input", function (e) {
   
   for (repo of repos) {
     repoLowercase = repo.InnerText.toLowercase();
-    if (repoLowercase.includes(inputLowercase) {
+    if (repoLowercase.includes(inputLowercase)) {
         repo.classList.remove("hide);
         } else {
         repo.classList.add("hide");

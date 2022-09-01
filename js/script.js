@@ -7,6 +7,7 @@ const dataRepo = document.querySelector(".repo-data");
 const repoBackButton = document.querySelector(".view-repos");
 const filterInput = document.querySelector(".filter-repos");
 
+
 const gitUserInfo = async function () {
   const userInfo = await fetch(`https://api.github.com/users/${username}`);
   const data = await userInfo.json();
@@ -41,6 +42,7 @@ const grabRepos = async function () {
 
 
 const showRepos = function (repos) {
+  filterInput.classList.remove("hide");
   for (const repo of repos) {
   const repoItem = document.createElement("li");
   repoItem.classList.add("repo");
@@ -76,6 +78,7 @@ const displayRepoInfo = function (repoInfo, languages) {
   dataRepo.innerHTML = "";
   dataRepo.classList.remove("hide");
   classRepo.classList.add("hide");
+  repoBackButton.classList.add("hide");
   const div = document.createElement("div");
   div.innerHTML = `
   <h3>Name: ${repoInfo.name}</h3>
@@ -89,6 +92,10 @@ const displayRepoInfo = function (repoInfo, languages) {
 
 
 
-//BackButton.addEventlistener("click", function () ){
+BackButton.addEventlistener("click", function () ){
+  classRepo.classList.remove("hide");
+  repoData.classList.add("hide");
+  repoBackButton.classList.add("hide");
+};
 
-//};
+

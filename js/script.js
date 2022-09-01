@@ -98,4 +98,18 @@ BackButton.addEventListener("click", function () {
   repoBackButton.classList.add("hide");
 });
 
-
+filterInput.addEventListener("input", function (e) {
+  const inputText = e.target.value;
+  const repos = document.QuerySelectorAll(".repo");
+  const inputLowercase = inputText.toLowerCase();
+  
+  for (repo of repos) {
+    repoLowercase = repo.InnerText.toLowercase();
+    if (repoLowercase.includes(inputLowercase) {
+        repo.classList.remove("hide);
+        } else {
+        repo.classList.add("hide");
+    }
+  }
+  
+});

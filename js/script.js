@@ -92,10 +92,10 @@ const displayRepoInfo = function (repoInfo, languages) {
 
 
 
-BackButton.addEventListener("click", function () {
+repoBackButton.addEventListener("click", function () {
   classRepo.classList.remove("hide");
   repoData.classList.add("hide");
-  BackButton.classList.add("hide");
+  repoBackButton.classList.add("hide");
 });
 
 filterInput.addEventListener("input", function (e) {

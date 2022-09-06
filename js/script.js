@@ -101,9 +101,9 @@ repoBackButton.addEventListener("click", function () {
 filterInput.addEventListener("input", function (e) {
   const inputText = e.target.value;
   const repos = document.querySelectorAll(".repo");
-  const inputLowercase = inputText.toLowerCase();
+  const inputLowercase = inputText.toLowercase();
   
-  for (repo of repos) {
+  for (let repo of repos) {
     const repoLowercase = repo.innerText.toLowercase();
     if (repoLowercase.includes(inputLowercase)) {
         repo.classList.remove("hide");

@@ -78,7 +78,7 @@ const displayRepoInfo = function (repoInfo, languages) {
   dataRepo.innerHTML = "";
   dataRepo.classList.remove("hide");
   classRepo.classList.add("hide");
-  repoBackButton.classList.add("hide");
+  repoBackButton.classList.remove("hide");
   const div = document.createElement("div");
   div.innerHTML = `
   <h3>Name: ${repoInfo.name}</h3>
@@ -103,7 +103,7 @@ filterInput.addEventListener("input", function (e) {
   const repos = document.querySelectorAll(".repo");
   const inputLowercase = inputText.toLowerCase();
   
-  for (let repo of repos) {
+  for (const repo of repos) {
     const repoLowercase = repo.innerText.toLowerCase();
     if (repoLowercase.includes(inputLowercase)) {
         repo.classList.remove("hide");

@@ -100,7 +100,7 @@ repoBackButton.addEventListener("click", function () {
 
 filterInput.addEventListener("input", function (e) {
   const inputText = e.target.value;
-  const repos = document.QuerySelectorAll(".repo");
+  const repos = document.querySelectorAll(".repo");
   const inputLowercase = inputText.toLowerCase();
   
   for (repo of repos) {
